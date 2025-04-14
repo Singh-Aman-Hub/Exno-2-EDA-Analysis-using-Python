@@ -83,7 +83,6 @@ sns.pairplot(dt)
 <img width="1440" alt="Screenshot 2025-04-14 at 1 04 00 PM" src="https://github.com/user-attachments/assets/11b656a1-d672-4ca6-b47f-dbcea0267a14" />
 <img width="1440" alt="Screenshot 2025-04-14 at 1 04 07 PM" src="https://github.com/user-attachments/assets/d66a3762-c685-4bf3-9402-58585052d546" />
 <img width="1440" alt="Screenshot 2025-04-14 at 1 04 11 PM" src="https://github.com/user-attachments/assets/7095cfc6-cfd9-4998-bc42-2dd91b65f648" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 16 PM" src="https://github.com/user-attachments/assets/1bcc1e9f-d401-4c5d-a066-22be72501d98" />
 <img width="1440" alt="Screenshot 2025-04-14 at 1 04 16 PM" src="https://github.com/user-attachments/assets/fce084ba-0c3a-4467-8d48-45116b041d97" />
 <img width="1440" alt="Screenshot 2025-04-14 at 1 04 20 PM" src="https://github.com/user-attachments/assets/435a9ea0-36b3-4160-a151-b73c452c9872" />
 <img width="1440" alt="Screenshot 2025-04-14 at 1 04 25 PM" src="https://github.com/user-attachments/assets/ebbfd357-27d4-4271-9e64-325d0dc74176" />
@@ -96,7 +95,7 @@ sns.pairplot(dt)
 
 
 # RESULT
-        <<INCLUDE YOUR RESULT HERE>>
+        Hence Exploratory Data Analysis were perfomed successfully on the given data set.
 
 
 
