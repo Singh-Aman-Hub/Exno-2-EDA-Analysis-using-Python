@@ -1,9 +1,6 @@
 # EXNO2DS
 # AIM:
       To perform Exploratory Data Analysis on the given data set.
-'''python
-Reg no: 212224040020 || Name: Aman Singh
-'''
       
 # EXPLANATION:
   The primary aim with exploratory analysis is to examine the data for distribution, outliers and anomalies to direct specific testing of your hypothesis.
@@ -26,88 +23,100 @@ STEP 7: Use cross tabulation method to quantitatively analyze the relationship b
 STEP 8: Use heatmap method of representation to show relationships between two variables, one plotted on each axis.
 
 ## CODING AND OUTPUT
-        Python codes:
-      
+```
+REG NO: 212224040020
+NAME  : AMAN SINGH
+```
+```
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-dt=pd.read_csv("/content/titanic_dataset.csv")
+dt=pd.read_csv("/content/titanic_dataset (2).csv")        
 dt
-
+```
+![image](https://github.com/user-attachments/assets/b0785025-b1be-497b-bdd0-9166deb02919)
+```
 dt.info()
-
-dt.describe()
-
+```
+![image](https://github.com/user-attachments/assets/19b2785f-8305-4fe7-a16b-1aa743620251)
+```
 dt.shape
-
+```
+![image](https://github.com/user-attachments/assets/ddccf450-1882-48ba-a13c-8974867ad934)
+```
 dt.set_index("PassengerId",inplace=True)
-
-dt
-
+dt.describe()
+```
+![image](https://github.com/user-attachments/assets/7f854990-dfec-49df-a03d-c6e48b3d2592)
+```
 dt.nunique()
+```
+![image](https://github.com/user-attachments/assets/7389d0ba-96b3-460f-a79b-d798559ef9a9)
+```
+dt["Survived"].value_counts()
+```
+![image](https://github.com/user-attachments/assets/47ab152f-63f6-44c8-97ce-b5905764c14e)
 
-dt.Survived.value_counts()
-
-pt=(dt.Survived.value_counts()/dt.shape[0]*100).round(2)
-pt
-
+```
+per=(dt["Survived"].value_counts()/dt.shape[0]*100).round(2)
+per
+```
+![image](https://github.com/user-attachments/assets/e6617829-44fd-4f55-abc3-61fdbe9c3ead)
+```
 sns.countplot(data=dt,x="Survived")
-
-dt
-
+```
+![image](https://github.com/user-attachments/assets/68b309cb-aa38-4b63-86de-17c4e5b1823c)
+```
 dt.Pclass.unique()
-
-dt.rename(columns={'Sex':'Gender'},inplace=True)
-
-sns.catplot(x="Gender",col="Survived",kind="count",data=dt,height=6,aspect=.7);
-
+```
+![image](https://github.com/user-attachments/assets/d780bfc3-9d77-4399-bedb-820f331af4ff)
+```
+dt.rename(columns={"Sex":"Gender"},inplace=True)
+dt
+```
+![image](https://github.com/user-attachments/assets/caf0e0d5-b445-4c09-8a95-46ac88f040bd)
+```
+sns.catplot(x="Gender",col="Survived",kind="count",data=dt,height=5,aspect=.7)
+```
+![image](https://github.com/user-attachments/assets/2b7894a7-d791-4626-8aed-ebaddc8a6a81)
+```
 sns.catplot(x="Survived",hue="Gender",data=dt,kind="count")
-
+```
+![image](https://github.com/user-attachments/assets/9b8d34f2-37bf-4c4c-9d8f-2b3f1f7346ce)
+```
 dt.boxplot(column="Age",by="Survived")
-
+```
+![image](https://github.com/user-attachments/assets/11182a5b-4abc-47c1-9175-11ce1e13886e)
+```
 sns.scatterplot(x=dt["Age"],y=dt["Fare"])
-
+```
+![image](https://github.com/user-attachments/assets/c43d5094-da52-4baa-8da9-348583f56fcd)
+```
 sns.jointplot(x="Age",y="Fare",data=dt)
-
-Fig,ax1 = plt.subplots(figsize=(8,5))
+```
+![image](https://github.com/user-attachments/assets/2acb22b0-ca11-428d-9234-e9a5f0255974)
+```
+fig,ax1=plt.subplots(figsize=(8,5))
 pt=sns.boxplot(ax=ax1,x="Pclass",y="Age",hue="Gender",data=dt)
-
-sns.catplot(col="Survived",x="Gender",hue="Pclass",kind="count",data=dt)
-
-corr = dt.select_dtypes(include=np.number).corr()
-sns.heatmap(corr, annot=True,)
-
+```
+![image](https://github.com/user-attachments/assets/0828890e-1229-40da-94bc-d0a05e67a337)
+```
+sns.catplot(data=dt,col="Survived",x="Gender",hue="Pclass",kind="count")
+```
+![image](https://github.com/user-attachments/assets/2a90e37b-7cbd-4e90-8fe9-896da5996a30)
+```
+numeric_dt = dt.select_dtypes(include=['int64','float64'])
+corr=numeric_dt.corr()
+sns.heatmap(corr,annot=True)
+```
+![image](https://github.com/user-attachments/assets/1f5b6e77-2561-486b-af3d-df4e29325753)
+```
 sns.pairplot(dt)
-
-
-      Codes with corresponding outputs:
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 00 PM" src="https://github.com/user-attachments/assets/11b656a1-d672-4ca6-b47f-dbcea0267a14" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 07 PM" src="https://github.com/user-attachments/assets/d66a3762-c685-4bf3-9402-58585052d546" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 11 PM" src="https://github.com/user-attachments/assets/7095cfc6-cfd9-4998-bc42-2dd91b65f648" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 16 PM" src="https://github.com/user-attachments/assets/fce084ba-0c3a-4467-8d48-45116b041d97" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 20 PM" src="https://github.com/user-attachments/assets/435a9ea0-36b3-4160-a151-b73c452c9872" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 25 PM" src="https://github.com/user-attachments/assets/ebbfd357-27d4-4271-9e64-325d0dc74176" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 29 PM" src="https://github.com/user-attachments/assets/64250432-92e7-443b-8989-17f1943553ae" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 34 PM" src="https://github.com/user-attachments/assets/2a6c98e8-14b7-4984-8fde-17bd74029d43" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 38 PM" src="https://github.com/user-attachments/assets/47c86c30-4945-41d8-b585-16e6903b7178" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 04 43 PM" src="https://github.com/user-attachments/assets/7901e494-c96b-4a6e-9818-e105822f6b33" />
-<img width="1440" alt="Screenshot 2025-04-14 at 1 05 07 PM" src="https://github.com/user-attachments/assets/3e2c6cde-6d7c-4e97-8ad2-13db4e810b2a" />
-
-
+```
+![image](https://github.com/user-attachments/assets/cffcd64e-ade0-4a99-9f51-7c35d1be4f6f)
+![image](https://github.com/user-attachments/assets/4c30e4d8-0206-41da-9639-2d70e290220f)
 
 # RESULT
-        Hence Exploratory Data Analysis were perfomed successfully on the given data set.
-
-
-
-
-
-
-
-
-
-
-
+Exploratory Data Analysis on the given data set was performed successfully.
 
