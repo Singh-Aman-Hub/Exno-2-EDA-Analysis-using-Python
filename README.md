@@ -128,3 +128,7 @@ Exploratory Data Analysis on the given data set was performed successfully.
 
 ![image](https://github.com/user-attachments/assets/cffcd64e-ade0-4a99-9f51-7c35d1be4f6f)
 ![image](https://github.com/user-attachments/assets/4c30e4d8-0206-41da-9639-2d70e290220f)
+![image](https://github.com/user-attachments/assets/cffcd64e-ade0-4a99-9f51-7c35d1be4f6f)
+![image](https://github.com/user-attachments/assets/4c30e4d8-0206-41da-9639-2d70e290220f)![image](https://github.com/user-attachments/assets/cffcd64e-ade0-4a99-9f51-7c35d1be4f6f)
+![image](https://github.com/user-attachments/assets/4c30e4d8-0206-41da-9639-2d70e290220f)![image](https://github.com/user-attachments/assets/cffcd64e-ade0-4a99-9f51-7c35d1be4f6f)
+![image](https://github.com/user-attachments/assets/4c30e4d8-0206-41da-9639-2d70e290220f)
